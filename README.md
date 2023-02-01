@@ -8,6 +8,7 @@ Can a new webpage boost products' sale? A/B Testing of an e-commerce webpage ch
 
 
 Situation Description
+
 In an effort to increase sales, an e-commerce platform proposes modifying its' website. In order to accomplish this, the company has developed a new webpage and is testing it in the hopes of increasing the number of users who "convert," or decide to purchase the company's product. However, the company wants to determine whether it should switch to the new page, maintain the old page, or run the experiment for a longer period before deciding.
 
 
