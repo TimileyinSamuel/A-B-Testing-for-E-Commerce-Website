@@ -1,5 +1,6 @@
 # A-B-Testing-for-E-Commerce-Website
 
+![picture](https://user-images.githubusercontent.com/119361599/216068174-92b4e4f0-8f2c-4d15-b2f0-d9965ade6b27.png)
 
 ---
 
@@ -38,7 +39,15 @@ The data set was examined for duplicates and missing values. All of these variab
 
 Distribution of Data
 There are 143,397 participants in the test group (users assigned the new landing page). In the control group (users assigned to the old landing page), 143,293 individuals participated. A/B testing is not dependent on having an equal number of participants in both groups. However, as earlier mentioned, it is more crucial that the participants are independent (i.e., they cannot belong to both groups) and that they are randomly assigned to these groups.
+
+<img width="234" alt="Screenshot 2023-01-25 at 13 27 03" src="https://user-images.githubusercontent.com/119361599/216068373-1c2deb9a-6de3-45c4-85a3-1e4d02fc7fa3.png">
+
+
 I went on to compare the conversion rates between the control group and the test group.
+
+<img width="267" alt="Screenshot 2023-01-25 at 13 29 19" src="https://user-images.githubusercontent.com/119361599/216068463-39ef87d0-df24-4ca6-9899-ffaa8cf00904.png">
+
+
 The conversion rate for the control group is 12, while for the test group it is 11.9. There is a minimal difference between the number of customers who buy when using the old page and the new page. It appears that the old page attracts more buyers than the new page. The important question is whether this difference between the treatment and control groups is sufficient to conclude that the old page outperforms the new page. In other words, is this result statistically significant enough to support this conclusion? This requires testing hypotheses.
 
 
@@ -70,6 +79,11 @@ The central limit theorem allows this assumption to be met without worry. Accord
 
 Homogeneity of Variance: Homogeneity of variance indicates that, when testing different groups of participants (as in this project), each sample comes from a population with the same variance. Unequal variances between the two groups distort the standard error estimate. So, because the confidence interval and significance tests are computed using the standard error, they will be biased if this assumption is not met.
 To test this assumption, I used the Levene's Test for Homogeneity of Variance.
+
+
+<img width="527" alt="Screenshot 2023-01-27 at 22 58 58" src="https://user-images.githubusercontent.com/119361599/216068732-59e1866b-c1f6-4367-bb52-5f445b836ef1.png">
+
+
 The result indicates that the variance between both groups is equal. So this assumption is met.
 Independence: This indicates that the data from different participants are independent, meaning that the behaviour of one participant does not affect the behaviour of another. Different treatment conditions yield independent results (because they come from different people). This assumption is already met.
 Now that all assumptions for this parametric test have been fulfilled, it is possible to test the hypothesis.
@@ -77,6 +91,10 @@ Now that all assumptions for this parametric test have been fulfilled, it is pos
 
 
 Hypothesis Result
+
+<img width="428" alt="Screenshot 2023-01-27 at 22 16 58" src="https://user-images.githubusercontent.com/119361599/216068894-ee27fc4f-1765-404d-8efa-9c97e95627e5.png">
+
+
 The results show that the p value is greater than alpha level of 0.05. Hence we fail to reject the null hypothesis, which indicates that the the new web page does not provide different result compared to the old web page.
 Interpreting Result in Business Words
 The difference seen in conversion rate for customers is not due to the old page or new page. Thus, the new web page does not increase the likelihood that consumers will buy the company's products (conversation rate).
