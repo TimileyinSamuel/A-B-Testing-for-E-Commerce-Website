@@ -114,6 +114,9 @@ To test this assumption, I used the Levene's Test for Homogeneity of Variance.
 
 
 The result indicates that the variance between both groups is equal. So this assumption is met.
+
+
+
 Independence: This indicates that the data from different participants are independent, meaning that the behaviour of one participant does not affect the behaviour of another. Different treatment conditions yield independent results (because they come from different people). This assumption is already met.
 Now that all assumptions for this parametric test have been fulfilled, it is possible to test the hypothesis.
 
