@@ -10,7 +10,9 @@
 Situation Description
 
 
+
 In an effort to increase sales, an e-commerce platform proposes modifying its' website. In order to accomplish this, the company has developed a new webpage and is testing it in the hopes of increasing the number of users who "convert," or decide to purchase the company's product. However, the company wants to determine whether it should switch to the new page, maintain the old page, or run the experiment for a longer period before deciding.
+
 
 
 
@@ -21,12 +23,14 @@ To examine whether the new web page increases the likelihood that users will pur
 
 
 
+
 The Study
 
 
 Before making this crucial decision, the company will need to collect and analyze data. The steps will involve randomly exposing a sample of the product users to the old and new webpage and documenting the conversion rate between both groups. Which webpage is most likely to persuade customers to buy the product? This is referred to as A/B testing.
 A/B testing, also known as "split testing," is an experiment in which two versions of a web page or application are compared to determine which performs better. These variations, designated A and B, are presented to users at random. Then, a portion of them will be directed to the first version, while the rest will be assigned to the second. The deciding metric for whether the new page is more successful is if there is an increase in the number of users who "convert," that is, decide to pay for the company's product.
 In this project, I will run this test for an e-commerce company to see if a new web page will increase user conversion rates when compared to its current web page.
+
 
 
 
@@ -40,7 +44,10 @@ group (control or test group): whether the user belongs to the control (those vi
 landing page: the page a user visits (old page or new page)
 converted: whether the user was converted or not(1 if user decided to pay for the product, 0 user decided not to pay for the product)
 
+
+
 Data Cleaning (missing values, duplicates)
+
 
 
 The data set was examined for duplicates and missing values. All of these variables have the potential to introduce bias into the analysis. The data set contained no missing values. However, the total number of rows was higher than the number of unique users. This meant that some product users were tested more than once or took part in both the treatment and control groups. Further investigation revealed that some users who logged in multiple times at different times were assigned to both the test and control groups. A key assumption of A/B testing is that observations are independent. It should be noted that a user cannot belong to both groups. These users are thus excluded from the analysis. These duplicates constituted 7788 rows (2.6%) of the dataset and were eliminated prior to analysis.
@@ -48,6 +55,7 @@ The data set was examined for duplicates and missing values. All of these variab
 
 
 Distribution of Data
+
 
 
 There are 143,397 participants in the test group (users assigned the new landing page). In the control group (users assigned to the old landing page), 143,293 individuals participated. A/B testing is not dependent on having an equal number of participants in both groups. However, as earlier mentioned, it is more crucial that the participants are independent (i.e., they cannot belong to both groups) and that they are randomly assigned to these groups.
@@ -67,6 +75,7 @@ The conversion rate for the control group is 12, while for the test group it is 
 Hypothesis Testing
 
 
+
 The following information is provided:
 The simple random sample size for treatment group = 143,293
 The simple random sample size for control = 143,397
@@ -79,6 +88,7 @@ The significance level (alpha) = 0.95
 Formulating Hypotheses
 
 
+
 Null Hypothesis: There is no significant difference between the conversion rates of users of the old and users of the new webpage.
 Alternative Hypothesis: There is significant difference between the conversion rates of users of the old page and users of the new webpage.
 
@@ -87,11 +97,13 @@ Alternative Hypothesis: There is significant difference between the conversion r
 Checking Statistical Test's Assumptions (Normality, Homogeneity of Variance, Independence)
 
 
+
 The final step prior to testing the hypothesis consists of checking the statistical test's underlying assumptions. In the following paragraphs, I will explain why each assumption is important, how it affects the results, and why it must be checked prior to testing the hypotheses. Normality and homogeneity of variance are two important assumptions that must be checked.
 
 
 Normality: For significance tests, the sampling distribution of what is being tested needs to be normal. The normal distribution applies to the model that will be fit to the data. Non-normal distributions affect parameter estimation. As a result, the confidence intervals are wrongfully determined. Deviation from the assumption of normality also affects the null hypothesis and significance testing because the distributions of the test statistics used for these purposes are related to the normal distribution.
 The central limit theorem allows this assumption to be met without worry. According to the central limit theorem, by calculating the means of many samples, one can approximate the true mean of the population from which the data for the groups were drawn. The distribution of sample means will have a normal distribution around the true mean. In other words, the bigger the sample gets, the more closely it will resemble that of a normal distribution. Both the control and test groups have more than 100,000 respondents. Thus, the assumption of normality can hold.
+
 
 
 Homogeneity of Variance: Homogeneity of variance indicates that, when testing different groups of participants (as in this project), each sample comes from a population with the same variance. Unequal variances between the two groups distort the standard error estimate. So, because the confidence interval and significance tests are computed using the standard error, they will be biased if this assumption is not met.
@@ -107,7 +119,9 @@ Now that all assumptions for this parametric test have been fulfilled, it is pos
 
 
 
+
 Hypothesis Result
+
 
 
 <img width="428" alt="Screenshot 2023-01-27 at 22 16 58" src="https://user-images.githubusercontent.com/119361599/216068894-ee27fc4f-1765-404d-8efa-9c97e95627e5.png">
@@ -122,11 +136,13 @@ The difference seen in conversion rate for customers is not due to the old page 
 Conclusion
 
 
+
 The company's new web page does not provide better conversation rates than the old web page.
 
 
 
 Recommendations
+
 
 
 As the new web page does not result in increased customer purchases, the old web page should be maintained.
